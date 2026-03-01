@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Club | Минимализм</title>
+    <link rel="stylesheet" type="text/css"
+              href="./styles/style.css">
+</head>
+<body>
+    <!-- Навигация (плавный скролл по якорям) -->
+    <nav class="navbar">
+        <div class="logo">FIT<span style="color:#fff;">LAB</span></div>
+        
+        <div class="nav-links">
+            <a href="#hero">Главная</a>
+            <a href="#features">Преимущества</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#form">Заявка</a>
+            <a href="#footer">Контакты</a>
+        </div>
+
+            <!-- Гамбургер для мобильных -->
+        <div class="hamburger" id="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+
+        <!-- Мобильное меню -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#hero">Главная</a>
+            <a href="#features">Преимущества</a>
+            <a href="#gallery">Галерея</a>
+            <a href="#form">Заявка</a>
+            <a href="#footer">Контакты</a>
+        </div>
+    </nav>
+
+    <!-- Hero с параллаксом -->
+    <section id="hero" class="hero">
+    <!-- ФОТО для параллакса: замените src на своё изображение -->
+        <img src="pictures/img_bg3.jpg" alt="Фитнес клуб" class="hero-parallax" id="heroImage">
+            <div class="hero-content">
+                <h1>ПРЕОБРАЗИ СЕБЯ</h1>
+                <p>Фитнес-клуб нового поколения. Индивидуальные программы, современное оборудование и команда профессионалов.</p>
+                <a href="#form" class="btn">Оставить заявку</a>
+            </div>
+    </section>
+
+    <!-- Преимущества -->
+    <section id="features" class="container">
+        <h2 class="fade-up">Почему мы?</h2>
+        <div class="features-grid">
+            <div class="feature-card fade-up">
+                <i class="fas fa-dumbbell"></i>
+                <h3>Современное оборудование</h3>
+                <p>Лучшие тренажёры мировых брендов для любых целей.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <i class="fas fa-users"></i>
+                <h3>Команда профи</h3>
+                <p>Тренеры с опытом более 5 лет и медицинским образованием.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <i class="fas fa-calendar-alt"></i>
+                <h3>Гибкий график</h3>
+                <p>Работаем 24/7. Тренируйтесь в любое удобное время.</p>
+            </div>
+            <div class="feature-card fade-up">
+                <i class="fas fa-heartbeat"></i>
+                <h3>Wellness-зона</h3>
+                <p>SPA, массаж и йога для восстановления после нагрузок.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея с горизонтальным скроллом (drag + колесо) -->
+    <section id="gallery" class="gallery-section">
+        <div class="container" style="padding-bottom: 0;">
+            <h2 class="fade-up">Галерея</h2>
+        </div>
+        <div class="gallery-container" id="galleryContainer">
+        <!-- ПРАВИЛЬНЫЙ СПОСОБ: используйте тег <img> внутри div -->
+        <div class="gallery-item">
+            <img src="pictures/img1.jpg" alt="Фитнес галерея 1">
+        </div>
+        <div class="gallery-item">
+            <img src="pictures/img2.jpg" alt="Фитнес галерея 2">
+        </div>
+        <div class="gallery-item">
+            <img src="pictures/img3.jpg" alt="Фитнес галерея 3">
+        </div>
+        <div class="gallery-item">
+            <img src="pictures/img4.jpg" alt="Фитнес галерея 4">
+        </div>
+        <div class="gallery-item">
+            <img src="pictures/img5.jpg" alt="Фитнес галерея 5">
+        </div>
+        <div class="gallery-item">
+            <img src="pictures/img6.jpg" alt="Фитнес галерея 6">
+        </div>
+        <div class="gallery-item">
+            <img src="pictures/img7.jpg" alt="Фитнес галерея 7">
+        </div>
+    </div>
+    </section>
+
+    <!-- Форма заявки -->
+    <section id="form" class="form-section">
+        <div class="container">
+            <h2 class="fade-up">Открытая заявка</h2>
+            <form id="contactForm" class="contact-form fade-up">
+                <!-- Внимание: замените YOUR_FORM_ID на актуальный ID из Formspree -->
+                <input type="hidden" name="_subject" value="Новая заявка с фитнес-лендинга">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="contact" placeholder="Email или телефон" required>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+                </div>
+                <button type="submit" class="btn" style="width:100%;">Отправить</button>
+                <div class="form-status" id="formStatus"></div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="logo" style="font-size:2rem;">FITLAB</div>
+            <div style="margin: 1rem 0;">
+                <p>ул. Спортивная, 12 | +7 (495) 123-45-67 | info@fitlab.ru</p>
+            </div>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-telegram"></i></a>
+                <a href="#"><i class="fab fa-vk"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <div class="copy">
+                © 2025 FITLAB. Все права защищены.
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <!-- КОММЕНТАРИИ ДЛЯ ЗАМЕНЫ КОНТЕНТА:
+         1. Видео в hero: замените src тега <video> на своё.
+         2. Галерея: элементы .gallery-item замените на <img> или установите фоновые изображения.
+         3. Formspree: замените 'YOUR_FORM_ID' в fetch URL на ваш ID (например, "mvoeqjzz").
+         4. Иконки соцсетей в футере добавьте актуальные ссылки.
+    -->
+</body>
+</html>
